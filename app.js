@@ -1,16 +1,28 @@
 
-function greetUser(){
+function greetUser() {
     alert("Welcome to the Animal Kingdom!");
 }
 
-function Question(){
-    let favAnimal = prompt("What is your favorite animal?");
-    console.log("The user's favorite animal is: " + favAnimal);
-    if (favAnimal.toLowerCase() == "snakes") {
-
-        document.write("You've come to the right place!")
+function Question() {
+    let correctAnswer = 6
+    let howMany = prompt("How many letters are in the word snakes?");
+    console.log("The user's answer is: " + howMany);
+    while (howMany != 6) {
+        alert("Sorry, wrong!");
+        howMany = prompt("How many letters are in the word snakes?");
     }
-    else { document.write("Sorry, but this page is about snakes;) ") }
+
+}
+
+
+let scaleQuestion = prompt("On a scale from 1 to 10, how much do you like snakes");
+console.log(typeof(scaleQuestion));
+for (let i = 0; i < scaleQuestion; i++){
+    document.write('<img src="snake.jpeg" alt="Snake"/>')
+}
+
+if (scaleQuestion <= 11){
+    console.log ("Snake Attack!")
 }
 
 
@@ -20,14 +32,15 @@ function Question(){
 
 
 
-function facts(){
+
+function facts() {
 
     document.write("Here, you'll find some fun facts about snakes!");
 }
 
 
 
-function scary(){
+function scary() {
 
     document.write("These ones are the scariest of them ALL!");
 }
